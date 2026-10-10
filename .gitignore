@@ -1,4 +1,4 @@
-# Release zips (boxelder_<version>.zip) built for the mod portal.
+# Mod portal zips. tools/release.sh writes them to build/release/; this catches strays.
 *.zip
 .DS_Store
 # Built from art/ by tools/pack-art.py. Run it after cloning, or the mod won't load.
@@ -9,5 +9,5 @@
 # (one carries a company's logo), so they stay out of this public repo: put your
 # own in reference/ and point CREATURES in tools/gen-art.py at them.
 /reference/
-# The OpenAI key. Only the author's global gitignore covered it before.
+# The OpenAI key gen-art.py reads. Never commit it.
 .env

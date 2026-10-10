@@ -1,7 +1,9 @@
-# Boxelder: Factorio 2.0 mod
+# Minnesota Bugs: Factorio 2.0 mod
 
 A joke mod for Minnesotans: small biters become **boxelder bugs**, medium biters
-become **Asian beetles**. It is an **art replacement only**. `data.lua` swaps
+become **Asian lady beetles**, and the player exterminates them. Mod name
+`minnesota-bugs` (so sprite paths are `__minnesota-bugs__/...`); public at
+https://github.com/jonjaques/factorio-mn-bugs, MIT. It is an **art replacement only**. `data.lua` swaps
 sprites and icons on the existing `small-biter` / `medium-biter` prototypes and
 their corpses. Health, speed, AI, spawning and stats stay vanilla, and the mod has
 no `control.lua`. Jon was explicit about this, so don't add behaviour.
@@ -15,8 +17,10 @@ reference: the docs leave out sheet layout and blend details.
 
 ```
 data.lua                 the whole mod: points 8 animations + 4 icons at graphics/
-info.json, locale/
-reference/               species photos the image model is given (dev only)
+info.json, locale/, changelog.txt, thumbnail.png (144x144), LICENSE   shipped in the zip
+README.md, docs/run.gif  GitHub and mod portal page
+reference/               species photos the image model is given. GITIGNORED: they are
+                         third-party (one has a company logo) and must not go public
 art/<target>/            SOURCE ART. One PNG per frame. Git LFS.
   generated/             raw model output: <anim>/<NN-DIR>.png + .json request record,
                          anchor.png, assembled.json (hashes of what assemble wrote)
@@ -33,6 +37,7 @@ tools/
   pack-art.py            art/ -> graphics/ sheets + .lua metadata
   lab.sh                 pack, then launch Factorio straight into the lab
   check.sh               headless validation in a throwaway profile
+  release.sh             pack, then build build/release/minnesota-bugs_<version>.zip
 ```
 
 Targets: `boxelder-bug` → `small-biter` (scale 0.5); `asian-beetle` →
@@ -146,7 +151,7 @@ animation only shows when they have something to hit. In the lab:
 so Jon's real saves and mod list are never touched. It:
 
 1. Runs `--dump-data --check-unused-prototype-data`, then asserts that all 8
-   final animations use `__boxelder__/` sheets, so a later mod can't silently
+   final animations use `__minnesota-bugs__/` sheets, so a later mod can't silently
    undo the swap.
 2. Runs the lab on a headless server bound to 127.0.0.1, unlisted. It counts the
    units, kills them and counts the corpses.
@@ -170,7 +175,8 @@ Gotchas found getting this working:
 - Game: `~/Library/Application Support/Steam/steamapps/common/Factorio/factorio.app`
   (binary `Contents/MacOS/factorio`; data `Contents/data/{base,core,space-age}`)
 - User data: `~/Library/Application Support/factorio/` (log `factorio-current.log`)
-- The mod is installed as a symlink: `…/factorio/mods/boxelder -> ~/Developer/boxelder`.
+- The mod is installed as a symlink: `…/factorio/mods/minnesota-bugs -> ~/Developer/boxelder`.
+  The docs require the folder name to be `name` from info.json (or `name_version`).
 - VS Code has the Factorio Modding Toolkit extension (`justarandomgeek.factoriomod-debug`).
 
 ## Git
@@ -178,5 +184,18 @@ Gotchas found getting this working:
 - `art/**/*.png` goes through Git LFS (`.gitattributes`): about 3,600 files, 200 MB,
   plus the 96 generated sheets. The sheets are the expensive part; keep them.
 - `graphics/` is gitignored, so run `uv run tools/pack-art.py` after a fresh clone.
-- A release zip needs `info.json`, `data.lua`, `locale/`, `graphics/` and nothing
-  else. `art/`, `tools/` and `scenarios/` are dev-only.
+- The repo is public. Nothing that isn't ours to license goes in: not `reference/`,
+  not `.env`. HEAD's art is all generated; the first commit holds the vanilla
+  extraction it started from, which Wube's ToS allows as mod-making material.
+
+## Releasing
+
+1. Bump `version` in `info.json` and add a `changelog.txt` section for it. The
+   game is strict about that file: separators are exactly 99 dashes, entries sit
+   under a two-space-indented category (`Features:`, `Bugfixes:`, ...).
+2. `tools/release.sh` packs and zips `info.json`, `data.lua`, `locale/`,
+   `graphics/`, `thumbnail.png`, `changelog.txt` and `LICENSE` into one
+   `minnesota-bugs_<version>/` folder. It refuses a version with no changelog
+   section. `art/`, `tools/`, `scenarios/` and `reference/` stay out.
+3. Upload at https://mods.factorio.com. The zip is ~112 MB, and Wube staff say the
+   portal drops uploads that take longer than 30 seconds.

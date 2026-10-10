@@ -18,10 +18,10 @@ APP="${FACTORIO_APP:-$HOME/Library/Application Support/Steam/steamapps/common/Fa
 BIN="$APP/Contents/MacOS/factorio"
 SECONDS_TO_RUN="${1:-10}"
 
-PROFILE=$(mktemp -d "${TMPDIR:-/tmp}/boxelder-check.XXXXXX")
+PROFILE=$(mktemp -d "${TMPDIR:-/tmp}/minnesota-bugs-check.XXXXXX")
 trap 'rm -rf "$PROFILE"' EXIT
 mkdir -p "$PROFILE/mods"
-ln -s "$ROOT" "$PROFILE/mods/boxelder"
+ln -s "$ROOT" "$PROFILE/mods/minnesota-bugs"
 printf '[path]\nread-data=__PATH__system-read-data__\nwrite-data=%s\n' "$PROFILE" > "$PROFILE/config.ini"
 # Same official mods as the real profile, so Space Age's data stage runs too.
 cat > "$PROFILE/mods/mod-list.json" <<'EOF'
@@ -30,13 +30,13 @@ cat > "$PROFILE/mods/mod-list.json" <<'EOF'
   {"name": "elevated-rails", "enabled": true},
   {"name": "quality", "enabled": true},
   {"name": "space-age", "enabled": true},
-  {"name": "boxelder", "enabled": true}
+  {"name": "minnesota-bugs", "enabled": true}
 ]}
 EOF
 # The server insists on every key, so start from the shipped example. Unlisted so
 # nothing is announced to the matchmaking server or LAN, and no auto_pause because
 # an empty server would otherwise never tick the scenario.
-jq '. + {name: "boxelder-check", visibility: {public: false, lan: false},
+jq '. + {name: "minnesota-bugs-check", visibility: {public: false, lan: false},
          require_user_verification: false, auto_pause: false}' \
   "$APP/Contents/data/server-settings.example.json" > "$PROFILE/server-settings.json"
 
@@ -57,8 +57,8 @@ sheets=$(jq -r '
   (.corpse["small-biter-corpse", "medium-biter-corpse"] | .animation, .decay_animation)
   | .layers[0].filenames[0]' "$PROFILE/script-output/data-raw-dump.json" 2>/dev/null) || sheets=""
 printf '%s\n' "$sheets" | sed 's/^/  /'
-if [ "$(printf '%s\n' "$sheets" | rg -c '^__boxelder__/')" != 8 ]; then
-  echo "FAILED: expected all 8 animations to use __boxelder__ sheets"; fail=1
+if [ "$(printf '%s\n' "$sheets" | rg -c '^__minnesota-bugs__/')" != 8 ]; then
+  echo "FAILED: expected all 8 animations to use __minnesota-bugs__ sheets"; fail=1
 fi
 
 echo "== lab scenario, ${SECONDS_TO_RUN}s headless"
@@ -66,7 +66,7 @@ echo "== lab scenario, ${SECONDS_TO_RUN}s headless"
 # FIFO held open on fd 3. That also lets this script send it a probe at the end.
 mkfifo "$PROFILE/console"
 "$BIN" -c "$PROFILE/config.ini" --mod-directory "$PROFILE/mods" \
-  --start-server-load-scenario boxelder/lab --bind 127.0.0.1 \
+  --start-server-load-scenario minnesota-bugs/lab --bind 127.0.0.1 \
   --server-settings "$PROFILE/server-settings.json" <"$PROFILE/console" >"$PROFILE/server.out" 2>&1 &
 pid=$!
 # The server ignores SIGTERM while running, so anything that goes wrong below must

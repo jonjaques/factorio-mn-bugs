@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2026-10-09
+  Major Features:
+    - Initial release.
+    - Small biters are boxelder bugs and medium biters are Asian lady beetles, in all 16 directions of their run, attack, death and decay animations.
+    - New icons for both creatures and their corpses.

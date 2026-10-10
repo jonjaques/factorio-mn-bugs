@@ -1,7 +1,7 @@
 -- Art lab: a flat, always-lit floor with a few of each replaced biter tier, for
 -- checking sprite edits. The biters run the vanilla AI untouched. Launch it with
 --   tools/lab.sh            (packs art/ first)
--- or from the main menu: New game > Scenarios > boxelder/lab.
+-- or from the main menu: New game > Scenarios > minnesota-bugs/lab.
 --
 -- The commands live here rather than in the mod's own control.lua so the mod
 -- itself stays a pure art replacement with no runtime script.

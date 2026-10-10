@@ -15,4 +15,4 @@ if pgrep -f "factorio.app/Contents/MacOS/factorio" >/dev/null; then
 fi
 
 uv run "$ROOT/tools/pack-art.py"
-open "$APP" --args --load-scenario boxelder/lab
+open "$APP" --args --load-scenario minnesota-bugs/lab

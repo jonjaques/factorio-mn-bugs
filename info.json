@@ -1,10 +1,11 @@
 {
-  "name": "boxelder",
+  "name": "minnesota-bugs",
   "version": "0.1.0",
-  "title": "Boxelder",
+  "title": "Minnesota Bugs",
   "author": "Jon Jaques",
-  "contact": "jaquers@gmail.com",
-  "description": "Replaces small biters with boxelder bugs and medium biters with Asian beetles.",
+  "contact": "https://github.com/jonjaques/factorio-mn-bugs/issues",
+  "homepage": "https://github.com/jonjaques/factorio-mn-bugs",
+  "description": "Every fall, boxelder bugs and Asian lady beetles invade Minnesota. Now they have invaded Nauvis: small biters are boxelder bugs and medium biters are Asian lady beetles. Exterminate them all. Art only; the biters behave exactly as in vanilla.",
   "factorio_version": "2.0",
   "dependencies": ["base >= 2.0"]
 }
