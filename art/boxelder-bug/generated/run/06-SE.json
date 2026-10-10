@@ -1,0 +1,111 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "size": "1328x1056",
+  "created": "2026-10-10T00:41:08+00:00",
+  "seconds": 37.3,
+  "usage": {
+    "input_tokens": 2883,
+    "input_tokens_details": {
+      "image_tokens": 2560,
+      "text_tokens": 323
+    },
+    "output_tokens": 1552,
+    "output_tokens_details": {
+      "image_tokens": 1552,
+      "text_tokens": 0
+    },
+    "total_tokens": 4435
+  },
+  "anchor_sha1": null,
+  "refs": [
+    "boxelder2.png",
+    "boxelder3.jpg"
+  ],
+  "layout": {
+    "crop": [
+      29,
+      15,
+      312,
+      228
+    ],
+    "cell": [
+      331,
+      261
+    ],
+    "cells": [
+      [
+        26,
+        30
+      ],
+      [
+        357,
+        30
+      ],
+      [
+        688,
+        30
+      ],
+      [
+        1019,
+        30
+      ],
+      [
+        26,
+        291
+      ],
+      [
+        357,
+        291
+      ],
+      [
+        688,
+        291
+      ],
+      [
+        1019,
+        291
+      ],
+      [
+        26,
+        552
+      ],
+      [
+        357,
+        552
+      ],
+      [
+        688,
+        552
+      ],
+      [
+        1019,
+        552
+      ],
+      [
+        26,
+        813
+      ],
+      [
+        357,
+        813
+      ],
+      [
+        688,
+        813
+      ],
+      [
+        1019,
+        813
+      ]
+    ],
+    "size": [
+      1328,
+      1056
+    ],
+    "cols": 4,
+    "rows": 4
+  },
+  "prompt": "Image 1 is a sprite sheet from the video game Factorio: 16 animation frames of a \"biter\" creature running, laid out in a 4x4 grid read left to right, top to bottom. Every frame faces the same direction (towards the bottom-right of the image) and is seen from the game's fixed high three-quarter top-down camera.\n\nRedraw this sprite sheet with the creature replaced by a realistic boxelder bug (Boisea trivittata). Images 2 and 3 are photographs of the species, for anatomy and colouring only: a flat, elongated body; charcoal-black forewings with thin bright red-orange edges and veins; three red-orange stripes on the pronotum; small red eyes; six thin black legs; two long, thin, segmented black antennae.\n\nFor every frame keep exactly: the grid layout, the frame's position and size within its cell, the heading direction, the camera angle, and the leg positions, so the frames still play as a smooth looping run cycle. The bug should cover about the same area as the biter's body and legs.\n\nStyle: Factorio's pre-rendered 3D sprite art: realistic, slightly desaturated, lit softly from the top-left, with detail that stays readable when shrunk. Fully transparent background. No shadow on the ground, no grid lines, no text, no labels, no extra creatures.",
+  "note": "first prototype, adopted as the anchor source; its prompt predates the template in gen-art.py"
+}

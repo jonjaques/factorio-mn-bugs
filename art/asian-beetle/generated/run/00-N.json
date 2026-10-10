@@ -1,0 +1,111 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "size": "1040x1328",
+  "created": "2026-10-10T00:58:42+00:00",
+  "seconds": 34.6,
+  "usage": {
+    "input_tokens": 5047,
+    "input_tokens_details": {
+      "image_tokens": 4586,
+      "text_tokens": 461
+    },
+    "output_tokens": 1542,
+    "output_tokens_details": {
+      "image_tokens": 1542,
+      "text_tokens": 0
+    },
+    "total_tokens": 6589
+  },
+  "anchor_sha1": "391f9950bb47107a96d733d15f65087333b2dc49",
+  "refs": [
+    "asian-beetle3.jpg",
+    "asian-beetle.jpg",
+    "asian-beetle2.jpg"
+  ],
+  "layout": {
+    "crop": [
+      94,
+      20,
+      306,
+      302
+    ],
+    "cell": [
+      260,
+      330
+    ],
+    "cells": [
+      [
+        24,
+        28
+      ],
+      [
+        284,
+        28
+      ],
+      [
+        544,
+        28
+      ],
+      [
+        804,
+        28
+      ],
+      [
+        24,
+        358
+      ],
+      [
+        284,
+        358
+      ],
+      [
+        544,
+        358
+      ],
+      [
+        804,
+        358
+      ],
+      [
+        24,
+        688
+      ],
+      [
+        284,
+        688
+      ],
+      [
+        544,
+        688
+      ],
+      [
+        804,
+        688
+      ],
+      [
+        24,
+        1018
+      ],
+      [
+        284,
+        1018
+      ],
+      [
+        544,
+        1018
+      ],
+      [
+        804,
+        1018
+      ]
+    ],
+    "size": [
+      1040,
+      1328
+    ],
+    "cols": 4,
+    "rows": 4
+  },
+  "prompt": "Image 1 is a sprite sheet from the video game Factorio: 16 animation frames of a \"biter\" creature running, laid out in a 4x4 grid read left to right, top to bottom. Every frame faces the same direction, straight up the image, away from the viewer, and is seen from the game's fixed high three-quarter top-down camera.\n\nRedraw this sprite sheet with the creature replaced by a realistic Asian lady beetle (Harmonia axyridis), the orange ladybug. Images 2 to 4 are photographs of the species, for anatomy and colouring only: a glossy, high-domed, almost hemispherical orange shell split by a seam down the middle, with round black spots; a cream-white pronotum with a black M-shaped mark; a small black head with cream cheek patches; six short orange-brown legs; short clubbed antennae.\n\nImage 5 is this exact beetle as already drawn for the game. Match its colours, markings, proportions and rendering exactly, but take the pose and direction from image 1.\n\nFor every frame keep exactly: the grid layout, the frame's position and size within its cell, the heading direction, the camera angle, and the pose and leg positions, so the frames still play back as the same animation. A lady beetle's legs are far shorter than the biter's: keep the body's position, heading and rhythm, but draw short beetle legs that just show beyond the shell instead of copying the biter's long legs. The beetle should cover about the same area as the biter's body and legs.\n\nStyle: Factorio's pre-rendered 3D sprite art: realistic, slightly desaturated, lit softly from the top-left, with detail that stays readable when shrunk. Every frame shows the identical beetle: same colours, markings and proportions. Fully transparent background. No shadow on the ground, no grid lines, no text, no labels, no extra creatures."
+}
