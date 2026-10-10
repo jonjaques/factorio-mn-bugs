@@ -1,0 +1,5 @@
+# Release zips (boxelder_<version>.zip) built for the mod portal.
+*.zip
+.DS_Store
+# Built from art/ by tools/pack-art.py. Run it after cloning, or the mod won't load.
+/graphics/

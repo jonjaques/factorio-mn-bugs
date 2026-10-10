@@ -1,0 +1,142 @@
+{
+  "replaces": "small-biter",
+  "corpse": "small-biter-corpse",
+  "source": "Factorio 2.0.77, __base__/graphics/entity/biter",
+  "scale": 0.5,
+  "scale_note": "layers are drawn at scale * 0.5 with multiply_shift = scale",
+  "baked_tints": {
+    "mask1": [
+      0.6,
+      0.58,
+      0.51,
+      1.0
+    ],
+    "mask2_overlay": [
+      0.62,
+      0.55,
+      0.2,
+      0.7
+    ]
+  },
+  "directions": [
+    "00-N",
+    "01-NNE",
+    "02-NE",
+    "03-ENE",
+    "04-E",
+    "05-ESE",
+    "06-SE",
+    "07-SSE",
+    "08-S",
+    "09-SSW",
+    "10-SW",
+    "11-WSW",
+    "12-W",
+    "13-WNW",
+    "14-NW",
+    "15-NNW"
+  ],
+  "direction_order": "index 0 faces north, then clockwise",
+  "animations": {
+    "run": {
+      "frames_per_direction": 16,
+      "color": {
+        "width": 398,
+        "height": 313,
+        "shift_by_pixel": [
+          -1.0,
+          -5.75
+        ]
+      },
+      "replaces_layers": [
+        "biter-run",
+        "biter-run-mask1",
+        "biter-run-mask2"
+      ],
+      "shadow": {
+        "width": 432,
+        "height": 292,
+        "shift_by_pixel": [
+          8.0,
+          -1.0
+        ]
+      }
+    },
+    "attack": {
+      "frames_per_direction": 11,
+      "color": {
+        "width": 360,
+        "height": 348,
+        "shift_by_pixel": [
+          -1.0,
+          -25.0
+        ]
+      },
+      "replaces_layers": [
+        "biter-attack",
+        "biter-attack-mask1",
+        "biter-attack-mask2"
+      ],
+      "shadow": {
+        "width": 476,
+        "height": 258,
+        "shift_by_pixel": [
+          31.0,
+          -1.0
+        ]
+      }
+    },
+    "die": {
+      "frames_per_direction": 17,
+      "color": {
+        "width": 490,
+        "height": 384,
+        "shift_by_pixel": [
+          0.0,
+          -9.0
+        ]
+      },
+      "replaces_layers": [
+        "biter-die",
+        "biter-die-mask1",
+        "biter-die-mask2"
+      ],
+      "shadow": {
+        "width": 538,
+        "height": 346,
+        "shift_by_pixel": [
+          12.0,
+          0.0
+        ]
+      }
+    },
+    "decay": {
+      "frames_per_direction": 24,
+      "color": {
+        "width": 534,
+        "height": 402,
+        "shift_by_pixel": [
+          0.5,
+          -1.0
+        ]
+      },
+      "replaces_layers": [
+        "biter-decay",
+        "biter-decay-mask1",
+        "biter-decay-mask2"
+      ]
+    }
+  },
+  "icons": {
+    "icon": {
+      "file": "icons/small-biter.png",
+      "icon_size": 64,
+      "mipmap_count": 4
+    },
+    "corpse_icon": {
+      "file": "icons/small-biter-corpse.png",
+      "icon_size": 64,
+      "mipmap_count": 4
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "boxelder",
+  "version": "0.1.0",
+  "title": "Boxelder",
+  "author": "Jon Jaques",
+  "contact": "jaquers@gmail.com",
+  "description": "Replaces small biters with boxelder bugs and medium biters with Asian beetles.",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0"]
+}
