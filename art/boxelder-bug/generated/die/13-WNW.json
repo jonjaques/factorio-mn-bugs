@@ -1,0 +1,115 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "size": "2112x912",
+  "created": "2026-10-10T00:58:15+00:00",
+  "seconds": 29.7,
+  "usage": {
+    "input_tokens": 5625,
+    "input_tokens_details": {
+      "image_tokens": 5162,
+      "text_tokens": 463
+    },
+    "output_tokens": 990,
+    "output_tokens_details": {
+      "image_tokens": 990,
+      "text_tokens": 0
+    },
+    "total_tokens": 6615
+  },
+  "anchor_sha1": "f905a9b2fae7f7dae4d23d77196a914846115fed",
+  "refs": [
+    "boxelder1.png",
+    "boxelder2.png",
+    "boxelder3.jpg"
+  ],
+  "layout": {
+    "crop": [
+      115,
+      18,
+      419,
+      271
+    ],
+    "cell": [
+      352,
+      301
+    ],
+    "cells": [
+      [
+        24,
+        28
+      ],
+      [
+        376,
+        28
+      ],
+      [
+        728,
+        28
+      ],
+      [
+        1080,
+        28
+      ],
+      [
+        1432,
+        28
+      ],
+      [
+        1784,
+        28
+      ],
+      [
+        24,
+        329
+      ],
+      [
+        376,
+        329
+      ],
+      [
+        728,
+        329
+      ],
+      [
+        1080,
+        329
+      ],
+      [
+        1432,
+        329
+      ],
+      [
+        1784,
+        329
+      ],
+      [
+        24,
+        630
+      ],
+      [
+        376,
+        630
+      ],
+      [
+        728,
+        630
+      ],
+      [
+        1080,
+        630
+      ],
+      [
+        1432,
+        630
+      ]
+    ],
+    "size": [
+      2112,
+      912
+    ],
+    "cols": 6,
+    "rows": 3
+  },
+  "prompt": "Image 1 is a sprite sheet from the video game Factorio: 17 animation frames of a \"biter\" creature dying. The frames show the creature collapsing, tumbling over and coming to rest. Keep that timing: the bug staggers and tips over onto its side or back where the biter does, its legs thrash and then curl in against the body, and the last frame is a dead bug lying still, laid out in a 6x3 grid read left to right, top to bottom. The last cell is empty; leave it empty. Every frame faces the same direction, to the left, turned slightly upwards, and is seen from the game's fixed high three-quarter top-down camera.\n\nRedraw this sprite sheet with the creature replaced by a realistic boxelder bug (Boisea trivittata). Images 2 to 4 are photographs of the species, for anatomy and colouring only: a flat, elongated body; charcoal-black forewings with thin bright red-orange edges and veins; three red-orange stripes on the pronotum; small red eyes; six thin black legs; two long, thin, segmented black antennae.\n\nImage 5 is this exact bug as already drawn for the game. Match its colours, markings, proportions and rendering exactly, but take the pose and direction from image 1.\n\nFor every frame keep exactly: the grid layout, the frame's position and size within its cell, the heading direction, the camera angle, and the pose and leg positions, so the frames still play back as the same animation. The bug should cover about the same area as the biter's body and legs.\n\nStyle: Factorio's pre-rendered 3D sprite art: realistic, slightly desaturated, lit softly from the top-left, with detail that stays readable when shrunk. Every frame shows the identical bug: same colours, markings and proportions. Fully transparent background. No shadow on the ground, no grid lines, no text, no labels, no extra creatures."
+}

@@ -1,0 +1,111 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "size": "1440x1024",
+  "created": "2026-10-10T00:50:58+00:00",
+  "seconds": 38.6,
+  "usage": {
+    "input_tokens": 5542,
+    "input_tokens_details": {
+      "image_tokens": 5152,
+      "text_tokens": 390
+    },
+    "output_tokens": 1418,
+    "output_tokens_details": {
+      "image_tokens": 1418,
+      "text_tokens": 0
+    },
+    "total_tokens": 6960
+  },
+  "anchor_sha1": "f905a9b2fae7f7dae4d23d77196a914846115fed",
+  "refs": [
+    "boxelder1.png",
+    "boxelder2.png",
+    "boxelder3.jpg"
+  ],
+  "layout": {
+    "crop": [
+      79,
+      34,
+      390,
+      241
+    ],
+    "cell": [
+      359,
+      255
+    ],
+    "cells": [
+      [
+        26,
+        26
+      ],
+      [
+        385,
+        26
+      ],
+      [
+        744,
+        26
+      ],
+      [
+        1103,
+        26
+      ],
+      [
+        26,
+        281
+      ],
+      [
+        385,
+        281
+      ],
+      [
+        744,
+        281
+      ],
+      [
+        1103,
+        281
+      ],
+      [
+        26,
+        536
+      ],
+      [
+        385,
+        536
+      ],
+      [
+        744,
+        536
+      ],
+      [
+        1103,
+        536
+      ],
+      [
+        26,
+        791
+      ],
+      [
+        385,
+        791
+      ],
+      [
+        744,
+        791
+      ],
+      [
+        1103,
+        791
+      ]
+    ],
+    "size": [
+      1440,
+      1024
+    ],
+    "cols": 4,
+    "rows": 4
+  },
+  "prompt": "Image 1 is a sprite sheet from the video game Factorio: 16 animation frames of a \"biter\" creature running, laid out in a 4x4 grid read left to right, top to bottom. Every frame faces the same direction, straight to the left, and is seen from the game's fixed high three-quarter top-down camera.\n\nRedraw this sprite sheet with the creature replaced by a realistic boxelder bug (Boisea trivittata). Images 2 to 4 are photographs of the species, for anatomy and colouring only: a flat, elongated body; charcoal-black forewings with thin bright red-orange edges and veins; three red-orange stripes on the pronotum; small red eyes; six thin black legs; two long, thin, segmented black antennae.\n\nImage 5 is this exact bug as already drawn for the game. Match its colours, markings, proportions and rendering exactly, but take the pose and direction from image 1.\n\nFor every frame keep exactly: the grid layout, the frame's position and size within its cell, the heading direction, the camera angle, and the pose and leg positions, so the frames still play back as the same animation. The bug should cover about the same area as the biter's body and legs.\n\nStyle: Factorio's pre-rendered 3D sprite art: realistic, slightly desaturated, lit softly from the top-left, with detail that stays readable when shrunk. Every frame shows the identical bug: same colours, markings and proportions. Fully transparent background. No shadow on the ground, no grid lines, no text, no labels, no extra creatures."
+}

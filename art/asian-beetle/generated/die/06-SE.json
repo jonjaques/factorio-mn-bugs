@@ -1,0 +1,115 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "size": "2000x864",
+  "created": "2026-10-10T01:02:07+00:00",
+  "seconds": 30.2,
+  "usage": {
+    "input_tokens": 5173,
+    "input_tokens_details": {
+      "image_tokens": 4650,
+      "text_tokens": 523
+    },
+    "output_tokens": 940,
+    "output_tokens_details": {
+      "image_tokens": 940,
+      "text_tokens": 0
+    },
+    "total_tokens": 6113
+  },
+  "anchor_sha1": "391f9950bb47107a96d733d15f65087333b2dc49",
+  "refs": [
+    "asian-beetle3.jpg",
+    "asian-beetle.jpg",
+    "asian-beetle2.jpg"
+  ],
+  "layout": {
+    "crop": [
+      48,
+      45,
+      331,
+      282
+    ],
+    "cell": [
+      331,
+      285
+    ],
+    "cells": [
+      [
+        31,
+        28
+      ],
+      [
+        362,
+        28
+      ],
+      [
+        693,
+        28
+      ],
+      [
+        1024,
+        28
+      ],
+      [
+        1355,
+        28
+      ],
+      [
+        1686,
+        28
+      ],
+      [
+        31,
+        313
+      ],
+      [
+        362,
+        313
+      ],
+      [
+        693,
+        313
+      ],
+      [
+        1024,
+        313
+      ],
+      [
+        1355,
+        313
+      ],
+      [
+        1686,
+        313
+      ],
+      [
+        31,
+        598
+      ],
+      [
+        362,
+        598
+      ],
+      [
+        693,
+        598
+      ],
+      [
+        1024,
+        598
+      ],
+      [
+        1355,
+        598
+      ]
+    ],
+    "size": [
+      2000,
+      864
+    ],
+    "cols": 6,
+    "rows": 3
+  },
+  "prompt": "Image 1 is a sprite sheet from the video game Factorio: 17 animation frames of a \"biter\" creature dying. The frames show the creature collapsing, tumbling over and coming to rest. Keep that timing: the beetle topples over onto its back where the biter falls, its short legs flail and then fold in, and the last frame is a dead beetle lying still, laid out in a 6x3 grid read left to right, top to bottom. The last cell is empty; leave it empty. Every frame faces the same direction, towards the bottom-right corner, and is seen from the game's fixed high three-quarter top-down camera.\n\nRedraw this sprite sheet with the creature replaced by a realistic Asian lady beetle (Harmonia axyridis), the orange ladybug. Images 2 to 4 are photographs of the species, for anatomy and colouring only: a glossy, high-domed, almost hemispherical orange shell split by a seam down the middle, with round black spots; a cream-white pronotum with a black M-shaped mark; a small black head with cream cheek patches; six short orange-brown legs; short clubbed antennae.\n\nImage 5 is this exact beetle as already drawn for the game. Match its colours, markings, proportions and rendering exactly, but take the pose and direction from image 1.\n\nFor every frame keep exactly: the grid layout, the frame's position and size within its cell, the heading direction, the camera angle, and the pose and leg positions, so the frames still play back as the same animation. A lady beetle's legs are far shorter than the biter's: keep the body's position, heading and rhythm, but draw short beetle legs that just show beyond the shell instead of copying the biter's long legs. The beetle should cover about the same area as the biter's body and legs.\n\nStyle: Factorio's pre-rendered 3D sprite art: realistic, slightly desaturated, lit softly from the top-left, with detail that stays readable when shrunk. Every frame shows the identical beetle: same colours, markings and proportions. Fully transparent background. No shadow on the ground, no grid lines, no text, no labels, no extra creatures."
+}

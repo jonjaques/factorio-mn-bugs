@@ -3,3 +3,11 @@
 .DS_Store
 # Built from art/ by tools/pack-art.py. Run it after cloning, or the mod won't load.
 /graphics/
+# Vanilla extraction, guide sheets and the shadow fit, rebuilt by tools/gen-art.py.
+/build/
+# Species photos gen-art.py sends to the image model. They are third-party photos
+# (one carries a company's logo), so they stay out of this public repo: put your
+# own in reference/ and point CREATURES in tools/gen-art.py at them.
+/reference/
+# The OpenAI key. Only the author's global gitignore covered it before.
+.env
