@@ -14,10 +14,10 @@ local targets =
 }
 
 local function sheet(art, name, scale, params)
-  local path = "__boxelder__/graphics/entity/" .. art .. "/" .. name
+  local path = "__minnesota-bugs__/graphics/entity/" .. art .. "/" .. name
   local ok, meta = pcall(require, path)
   if not ok then
-    error("Boxelder: " .. path .. ".lua is missing. Run `uv run tools/pack-art.py` and restart Factorio.\n" .. tostring(meta))
+    error("Minnesota Bugs: " .. path .. ".lua is missing. Run `uv run tools/pack-art.py` and restart Factorio.\n" .. tostring(meta))
   end
 
   local filenames = {}
@@ -50,7 +50,7 @@ for _, t in pairs(targets) do
   local unit = data.raw.unit[t.unit]
   local corpse = data.raw.corpse[t.corpse]
 
-  unit.icon = "__boxelder__/graphics/icons/" .. t.art .. ".png"
+  unit.icon = "__minnesota-bugs__/graphics/icons/" .. t.art .. ".png"
   unit.run_animation =
   {
     layers =
@@ -70,7 +70,7 @@ for _, t in pairs(targets) do
 
   -- Only the two animations are replaced. The corpse's timings, ground patch and
   -- direction shuffle from add_biter_die_animation() stay as vanilla set them.
-  corpse.icon = "__boxelder__/graphics/icons/" .. t.art .. "-corpse.png"
+  corpse.icon = "__minnesota-bugs__/graphics/icons/" .. t.art .. "-corpse.png"
   corpse.animation =
   {
     layers =

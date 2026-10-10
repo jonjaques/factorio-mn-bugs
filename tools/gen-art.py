@@ -402,6 +402,12 @@ def cmd_generate(args):
     print(f"{len(todo)} of {len(jobs)} selected sheets to generate ({len(jobs) - len(todo)} already exist)")
     if not todo:
         return
+    # reference/ is gitignored (third-party photos), so a fresh clone has none; fail
+    # here rather than with a traceback per worker thread.
+    missing = sorted({r["file"] for t, *_ in todo for r in CREATURES[t]["refs"] if not (REFERENCE / r["file"]).exists()})
+    if missing:
+        raise SystemExit(f"reference/ is missing {', '.join(missing)}. The photos are not in the repo: "
+                         "add your own and list them in CREATURES")
     key = "" if args.dry_run else api_key()
     failures = []
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
